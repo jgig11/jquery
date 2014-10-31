@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>嵌套函数中的变量</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//定义函数
+				function writeText()
+				{
+					//此处定义的局部变量可以在整个writeText()函数体中使用
+					//也可以在嵌套在该函数体中的其他函数中使用
+					var x = "这是一个局部变量";
+					//定义一个嵌套的函数
+					function writeText1()
+					{
+						//嵌套函数中的变量，该变量只能在writeText1()函数体中使用
+						//不能在writeText1()函数体之外使用
+						var y = "这是一个嵌套函数中的变量";
+						//输出局部变量x
+						document.write(x+"<br>");
+						//输出嵌套函数中的变量y
+						document.write(y+"<br>");
+					}
+					//调用嵌套的函数
+					writeText1();
+					//输出局部变量x
+					document.write(x+"<br>");
+					//如果有以下代码，将会出错
+					//document.write(y+"<br>");
+				}
+				//调用函数
+				writeText();
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>构造函数</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				//用来当作方法使用的函数
+				function write(str)
+				{
+					document.write(str + "<br>");
+				}
+				//自定义构造函数
+				function pen(name,color,price)
+				{
+					//对象的name属性
+					this.name = name;
+				  //对象的color属性
+				  this.color = color;
+				  //对象的price属性
+				  this.price = price;
+				  //对象的write方法，注意wirte后面不用括号
+				  this.write = write;
+				}
+
+				//定义一个对象
+				var pen1 = new pen("铅笔","红色",20);
+				document.write("笔的名称为：" + pen1.name +"<br>");
+				document.write("笔的颜色为：" + pen1.color +"<br>");
+				document.write("笔的价格为：" + pen1.price +"<br><br>");
+				document.write("用笔写出来的文字：");
+				pen1.write("铅笔字");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

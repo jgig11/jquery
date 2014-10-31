@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>随机图片</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function changeImg()
+				{
+					//设置随机数
+					var ran = Math.random();
+					//由于random()方法产生的是0到1之间的随机数，所以将其乘以10，后再取整，就可以得到0到10之间的数
+					ram = Math.round(ran*10);
+					//将图片存在数组中
+					var arr = new Array();
+					//通过循环，设置数组中的元素为一个图片对象
+					//注意与sample23.htm中的数组不同，sample23.htm中的arr[]数组存放的是图片的地址，而不是图片对象
+					for (i=0;i<11;i++)
+					{
+						arr[i] = new Image();
+					}
+					//设置图片对象的src属性
+					arr[0].src = "img/img01.jpg";
+					arr[1].src = "img/img02.jpg";
+					arr[2].src = "img/img03.jpg";
+					arr[3].src = "img/img04.jpg";
+					arr[4].src = "img/img05.jpg";
+					arr[5].src = "img/img06.jpg";
+					arr[6].src = "img/img07.jpg";
+					arr[7].src = "img/img08.jpg";
+					arr[8].src = "img/img09.jpg";
+					arr[9].src = "img/img10.jpg";
+					arr[10].src = "img/flower.jpg";
+					
+					//设置图片的地址为数组元素（即图片对象）的src属性值
+					//注意此处与sample23.htm中的不同，sample23.htm中此设设置的是arr[ram]，而不是arr[ram].src
+					document.images[0].src = arr[ram].src;
+				}
+				setInterval("changeImg()",1000);
+			-->
+		</script>
+	</head>
+	<body>
+		<img src="img/flower.jpg">
+	</body>
+</html>

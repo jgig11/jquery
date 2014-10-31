@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>周期执行</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function myFun()
+				{					
+					setInterval("setDate()",1000);
+				}
+				function setDate()
+				{
+					var myDate = new Date();
+					myForm.showDate.value = myDate.toLocaleString();
+				}
+			-->
+		</script>
+	</head>
+	<body onload="myFun()">
+		<form name="myForm">
+			当前时间为：<input type="text" name="showDate" size="25">
+		</form>
+	</body>
+</html>

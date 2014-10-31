@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>设置网页背景颜色和默认文字颜色</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function setDoc()
+				{
+					document.bgColor = document.myForm.bgcolor.value;
+					document.fgColor = document.myForm.fgcolor.value;
+				}
+			-->
+		</script>
+	</head>
+	<body bgcolor="black" text="white">
+		<form name="myForm">
+			网页背景颜色：<input type="text" name="bgcolor" value="red"><br>
+			默认文字颜色：<input type="text" name="fgcolor" value="blue"><br>
+			<input type="button" value="确定" onclick="setDoc()">
+		</form>
+		<font color="green">设置为绿色的文字</font>
+	</body>
+</html>

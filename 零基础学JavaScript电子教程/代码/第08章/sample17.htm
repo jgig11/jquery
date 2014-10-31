@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>键盘事件</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function keypress()
+				{
+					if (myform.myText1.value.length>=5)
+					{
+						alert("您只能输入5个字");
+						return false;
+					}
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myform">
+			<input type="text" name="myText1" onkeypress="return keypress()"><br>
+			<input type="text" name="myText2" onkeydown="return keypress()"><br>
+			<input type="text" name="myText3" onkeyup="return keypress()"><br>
+		</form>
+	</body>
+</html>

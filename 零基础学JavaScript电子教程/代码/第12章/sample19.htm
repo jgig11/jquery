@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>输出HTML文件中的所有元素</title>
+	</head>
+	<body>
+		<font color='red'>请完成以下表单：</font>
+		<form name="myForm">
+			姓名：<input type="text" name="myName" value="刘智勇"><br>
+			性别：
+			<select name="mySex">
+				<option value="man">男</option>
+				<option value="woman">女</option>
+			</select><br>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//用于递归调用的函数，可以输出所有HTML元素
+				function showTag(htmlLElement,layerCount)
+				{
+					//当前元素的所有子元素
+					var childElement = htmlLElement.children;
+					//当前元素的子元素个数
+					var childElementLenght = childElement.length;
+					//用于控制版式的变量
+					layerCount++;
+					//通过循环输出当前元素的所有子元素
+					for (var i=0;i<childElementLenght;i++)
+					{
+						//版式控制
+						for(var j=0;j<layerCount;j++)
+						{
+							document.write("&nbsp;&nbsp;");
+						}
+						//输出当前元素的子元素名称
+						document.write(childElement[i].tagName,"<br>");
+						//递归调用
+						showTag(childElement[i],layerCount);
+					}
+				}
+				//输出HTML文档中的第一个元素
+				document.write(document.all[0].tagName,"<br>");
+				//开始调用递归函数
+				showTag(document.all[0],0);
+			-->
+		</script>
+	</body>
+</html>

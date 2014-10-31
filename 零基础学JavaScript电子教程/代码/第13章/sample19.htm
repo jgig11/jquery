@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Form对象与单选框、复选框对象</title>
+	</head>
+	<body>
+		<form name="myForm">
+			请选择性别：<br>
+			<input type="radio" value="男" name="mySex" checked>男<br>
+			<input type="radio" value="女" name="mySex">女<br><br>
+			喜欢的阅读方式：<br>
+			<input type="checkbox" value="book" name="myRead">图书<br>
+			<input type="checkbox" value="web" name="myRead" checked>网络<br>
+			<input type="checkbox" value="TV" name="myRead" checked>电视<br>			
+		</form>
+		<script language="javascript" type="text/javascript">
+		<!--
+			for (i=0;i<document.myForm.length;i++)
+			{
+				document.write("元素",i,"的名称为：",document.myForm.elements[i].name,"，值为：",document.myForm.elements[i].value,"<br>");
+			}
+		-->
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>改变图片大小</title>		
+		<script language="javascript" type="text/javascript">
+			<!--
+				//将图片缩小10%
+				function changeImg1()
+				{					
+					document.images[0].width = document.images[0].width * 0.9;
+					document.images[0].height = document.images[0].height * 0.9;
+				}
+				//将图片扩大10%
+				function changeImg2()
+				{					
+					document.images[0].width = document.images[0].width * 1.1;
+					document.images[0].height = document.images[0].height * 1.1;
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<input type="button" value="-" onclick="changeImg1()">
+		<input type="button" value="+" onclick="changeImg2()"><br>
+		<img src="img/flower.jpg">
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>状态栏瞬间信息</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				window.defaultStatus = "现在是状态栏的默认信息";
+				function setStatus(message)
+				{
+					window.status = message;
+					return true;
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<a href="sample01.htm">没有设置状态栏瞬间信息的超链接</a><br>
+		<a href="sample01.htm" onmouseover="return setStatus('第2个超链接')">设置了状态栏瞬间信息的超链接</a><br>
+		<a href="sample01.htm" onmouseover="setStatus('第3个超链接')">设置了状态栏瞬间信息的超链接，但没有返回值</a><br>
+		<input type="button" value="按钮" onmouseover="setStatus('我是一个按钮')">
+	</body>
+</html>

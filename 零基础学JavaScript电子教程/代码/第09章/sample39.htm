@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>框架页</title>
+	</head>
+	<body>
+		<iframe src="sample38_1.htm" height="50"></iframe><br>
+		<iframe src="sample38_2.htm" height="50"></iframe><br>
+		<iframe src="sample38_3.htm" height="50"></iframe><br>
+		<script language="javascript" type="text/javascript">
+			<!--
+				for (i=0;i<window.frames.length;i++)
+				{
+					//在子窗口文档中输入文字
+					window.frames[i].document.write("这是第" + (i+1) + "个子窗口的内容");
+					//关闭子窗口文档的输出流
+					window.frames[i].document.close();
+				}
+			-->
+		</script>
+	</body>
+</html>

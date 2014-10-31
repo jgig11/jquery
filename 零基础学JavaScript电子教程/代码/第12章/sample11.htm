@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>在网页中输出文字</title>
+		<script language="javascript" type="text/javascript">
+		<!--
+			function outText()
+			{
+				var myStr = myForm.myText.value;
+				document.write("使用write()方法输出的文字","<br>");
+				document.writeln("使用writeln()方法输出的文字","<br>");
+				document.write("您输入的文字为：",myStr);
+			}
+		-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			请输入文字：<input type="text" name="myText" value="刘智勇">
+			<input type="button" value="提交" onclick="outText()">
+		</form>
+	</body>
+</html>

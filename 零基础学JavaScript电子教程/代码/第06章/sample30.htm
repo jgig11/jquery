@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>定义数字对象</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//显式创建一个数字对象
+				var myNumber1 = new Number(10);
+				//将字符串"10.23"转换成数字变量
+				var myNumber2 = Number("10.23");
+				//直接定义一个数字变量
+				var myNumber3 = 123.456;
+				
+				//将数字对象转换成本地格式的字符串
+				document.write("myNumber1 = " + myNumber1.toLocaleString() + "<br>");
+				/*
+				toLocaleString()方法是数字对象的方法
+				虽然myNumber2和myNumber3都只是一个变量，但也可以直接使用toLocaleString()方法
+				因为JavaScript会自动在数字与数字对象之间进行转换
+				*/
+				document.write("myNumber2 = " + myNumber2.toLocaleString() + "<br>");
+				document.write("myNumber3 = " + myNumber3.toLocaleString() + "<br>");
+				
+				//以下代码中，字符串无法转换为数字，所以返回NaN
+				var myNumber4 = Number("10。23");
+				document.write("myNumber4 = " + myNumber4 + "<br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

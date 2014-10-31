@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>prototype属性</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				//定义一个函数，该函数的作用是创建一个对象
+				function pen(color,price)
+				{
+					//对象的color属性
+				  this.color = color;
+				  //对象的price属性
+				  this.price = price;
+				}
+				
+				//定义一个对象
+				var pen1 = new pen("红色",20);
+				//输出对象的属性
+				document.write("笔1的颜色为：" + pen1.color +"<br>");
+				document.write("笔1的价格为：" + pen1.price +"<br>");
+				document.write("笔1的名称为：" + pen1.name +"<br><br>");
+				
+				//为构造函数添加一个属性
+				pen.prototype.name = "钢笔";
+				
+				//定义一个对象
+				var pen2 = new pen("蓝色",30);
+				//输出对象的属性
+				document.write("笔2的颜色为：" + pen2.color +"<br>");
+				document.write("笔2的价格为：" + pen2.price +"<br>");
+				document.write("笔2的名称为：" + pen2.name +"<br><br>");
+				
+				//修改对象的属性
+				pen2.name = "铅笔";
+				document.write("笔2的名称为：" + pen2.name +"<br><br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>数组对象的sort()方法</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				var arr = [39,11,3,9,1,77];
+				document.write("原数组元素为：" + arr.toString() + "<br>");
+				arr.sort();
+				document.write("按字符编码排序：" + arr.toString() + "<br>");
+				
+				//正序排序
+				function ascOrder(x,y)
+				{
+					if (x>y)
+					{
+						return 1;
+					}
+					else
+					{
+						return -1;
+					}
+				}
+				//倒序排序
+				function descOrder(x,y)
+				{
+					if (x>y)
+					{
+						return -1;
+					}
+					else
+					{
+						return 1;
+					}
+				}
+				arr.sort(ascOrder);
+				document.write("按数字正序排序：" + arr.toString() + "<br>");
+				arr.sort(descOrder);
+				document.write("按数字倒序排序：" + arr.toString() + "<br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

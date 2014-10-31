@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>加载与卸载事件</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function changeImg()
+				{
+					//改变图片
+					document.myForm.myImg.src = "img/flower1.jpg";
+				}
+			-->
+		</script>
+
+	</head>
+	<body onload="alert('加载网页')" onunload="alert('卸载网页')">
+		<form name="myForm">
+			<a href="sample12.htm">关闭窗口或跳转到其他网页都会产生unload事件</a>
+			<img src="img/flower.jpg" name="myImg" onload="alert('加载图片')"><br>
+			<input type="button" onclick="changeImg()" value="替换图片">
+		</form>
+	</body>
+</html>

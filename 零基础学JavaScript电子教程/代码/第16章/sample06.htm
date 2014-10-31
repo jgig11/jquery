@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>用户注册</title>
+		<script language="javascript" type="text/javascript">
+		<!--
+			var xmlHttp;
+			function createXMLHttpRequest()
+			{
+				if (window.ActiveXObject)
+				{
+					xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				else if (window.XMLHttpRequest)
+				{
+					xmlHttp = new XMLHttpRequest();
+				}
+			}
+			
+			//判断用户名是否已经被使用
+			function showUserErr()
+			{
+				if (xmlHttp.readyState==4)
+				{
+					if (xmlHttp.status==200 || xmlHttp.status==0)
+					{
+						var registerNames = xmlHttp.responseText;
+						var registerName = registerNames.split("|");
+						var bFlag = true;
+						for (var i=0;i<registerName.length;i++)
+						{
+							if (registerName[i]==document.myForm.userName.value)
+							{
+								bFlag = false;
+								break;
+							}
+						}
+						
+						var node = document.getElementById("userNameNode");
+						if (bFlag)
+						{
+							node.firstChild.nodeValue = "该用户名没有注册，请放心使用";
+							//如果用户名没有被使用，则用绿色的字进行提示
+							node.style.color = "green";
+						}
+						else
+						{
+							node.firstChild.nodeValue = "该用户名有人注册，不能使用";
+							//如果用户名没有被使用，则用红色的字进行提示
+							node.style.color = "red";
+						}
+					}
+					else
+					{
+						alert("异步调用出错\n返回的HTTP状态码为：" + xmlHttp.status + "\n返回的HTTP状态信息为：" + xmlHttp.statusText);
+					}
+				}
+			}
+			
+			function checkUser()
+			{
+				if (document.myForm.userName.value.length==0)
+				{
+					var node = document.getElementById("userNameNode");
+					node.firstChild.nodeValue = "请输入用户名";
+					//如果没有输入用户名，则用红色的字进行提示
+					node.style.color = "red";
+				}
+				else
+				{
+					createXMLHttpRequest();
+					if (xmlHttp!=null)
+					{
+						xmlHttp.open("get","sample05.txt",true);
+						xmlHttp.onreadystatechange = showUserErr;
+						xmlHttp.send(null);
+					}
+				}
+			}
+		-->
+		</script>
+	</head>
+	<body>
+		<h1 align="center">用户注册</h1>
+		<form action="submit.htm" name="myForm" method="post">
+			用&nbsp;户&nbsp;名：<input type="text" name="userName" onblur="checkUser()"><span id="userNameNode">&nbsp;</span><br>
+			电子邮件：<input type="text" name="userEmail"><br>
+			<input type="submit" value="提交" name="mySubmit"><input type="reset" value="重置">
+		</form>
+	</body>
+</html>

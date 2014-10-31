@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>限制文本框中输入的字数</title>
+		<script language="javascript" type="text/javascript">
+		<!--
+			function checkText()
+			{
+				if (document.myForm.textTitle.value.length>15)
+				{
+					alert("标题文字内容不能超过15个字");
+					return false;
+				}
+				if (document.myForm.Context.value.length>100)
+				{
+					alert("内容框中的文字不能超过100个字");
+					return false;
+				}
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm" onsubmit="return checkText()" action="submit.htm">
+			标题：<input type="text" name="textTitle" size="30">（限输入15个文字）<br>
+			内容：<textarea rows="10" cols="30" name="Context"></textarea><br>
+			（限输入100个文字）<br>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+	</body>
+</html>

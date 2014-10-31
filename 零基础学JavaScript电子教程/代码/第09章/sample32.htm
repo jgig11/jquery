@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>调整窗口大小</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function GoTo()
+				{
+					window.resizeTo(myForm.windowWidth.value,myForm.windowHeight.value);
+				}
+				function GoBy()
+				{
+					window.resizeBy(myForm.windowWidth.value,myForm.windowHeight.value);
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			宽度：<input type="text" name="windowWidth" value="300" size="5"><br>
+			高度：<input type="text" name="windowHeight" value="300" size="5"><br>
+			<input type="button" value="调整到绝对大小" onclick="GoTo()">
+			<input type="button" value="调整到相对大小" onclick="GoBy()">
+		</form>
+	</body>
+</html>

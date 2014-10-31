@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>获取单选框与复选框的值</title>
+	</head>
+	<body>
+		<form name="myForm">
+			请选择性别：<br>
+			<input type="radio" value="男" name="mySex">男<br>
+			<input type="radio" value="女" name="mySex">女<br><br>
+			喜欢的阅读方式：<br>
+			<input type="checkbox" value="图书" name="myRead">图书<br>
+			<input type="checkbox" value="网络" name="myRead">网络<br>
+			<input type="checkbox" value="电视" name="myRead">电视<br><br>	
+			<input type="button" value="确定" onclick="boxValue()">
+		</form>
+		<script language="javascript" type="text/javascript">
+		<!--
+			function boxValue()
+			{
+				//遍历单选框中的所有选项
+				for (i=0;i<document.myForm.mySex.length;i++)
+				{
+					//判断单选框是否被选择
+					if (document.myForm.mySex[i].checked)
+					{
+						alert("单选框中您选择了“" + document.myForm.mySex[i].value + "”选项");
+						break;
+					}
+				}
+				var checkBoxValue = "";
+				//遍历复选框中的所有选项
+				for (i=0;i<document.myForm.myRead.length;i++)
+				{
+					//判断复选框是否被选择
+					if (document.myForm.myRead[i].checked)
+					{
+						checkBoxValue +=document.myForm.myRead[i].value + " ";
+					}
+				}
+				if (checkBoxValue!="")
+				{
+					alert("复选框中您选择了“" + checkBoxValue + "”选项");
+				}
+			}
+		-->
+		</script>
+	</body>
+</html>

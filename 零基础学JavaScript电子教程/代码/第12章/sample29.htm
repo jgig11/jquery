@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>网页上的所有超链接</title>
+	</head>
+	<body>
+		<a href="sample01.htm">sample01.htm</a><br>
+		<a href="sample02.htm">sample02.htm</a><br>
+		<a href="sample03.htm">sample03.htm</a><br>
+		<a href="sample04.htm">sample04.htm</a><br>
+		<a href="sample05.htm">sample05.htm</a><br>
+		<script language="javascript" type="text/javascript">
+			<!--
+				document.write("本页中所包含的超链接有：<br>");
+				for(i=0;i<document.links.length;i++)
+				{
+					document.write(document.links[i].href,"<br>");
+					document.links[i].target = "_blank";
+				}
+			-->
+		</script>
+	</body>
+</html>
+

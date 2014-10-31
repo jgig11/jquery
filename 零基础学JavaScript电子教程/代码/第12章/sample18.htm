@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>输出HTML元素下的子元素</title>
+	</head>
+	<body>
+		<font color='red'>请完成以下表单：</font>
+		<form name="myForm" onsubmit="return showSelect()">
+			姓名：<input type="text" name="myName" value="刘智勇"><br>
+			性别：
+			<select name="mySex">
+				<option value="man">男</option>
+				<option value="woman">女</option>
+			</select><br>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function showSelect()
+				{
+					//获取下拉列表框下的所有元素
+					var selects = document.all["mySex"].children;
+	
+					for (i=0;i<selects.length;i++)
+					{
+						//判断选项框是否被选择
+						if (selects[i].selected)
+						{
+							//输出已选择的选项框中的文字
+							document.write("您选择的性别为：",selects[i].text,"<br>");
+							break;
+						}
+					}
+					return true;
+				}
+			-->
+		</script>
+	</body>
+</html>

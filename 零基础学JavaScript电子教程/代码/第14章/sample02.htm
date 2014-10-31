@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>获取cookie的值</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+			//设置cookie
+			function setCookie()
+			{
+				//设置第1个cookie，即名为cookieName的cookie
+				document.cookie = "cookieName = " + document.myForm.myName.value;
+				//设置第2个cookie，即名为cookiePassword的cookie
+				document.cookie = "cookiePassword = " + document.myForm.myPassword.value;
+				alert("cookie文件中的内容为：" + document.cookie + "\n" + "cookieName的值为：" + getCookieValue("cookieName") + "\ncookiePassword的值为：" + getCookieValue("cookiePassword"));
+			}
+			
+			//返回cookie的值
+			function getCookieValue(cookieName)
+			{
+				//读取整个cookie文件中的内容
+				var cookies = document.cookie;
+				//查找cookie名在字符串的开始位置
+				var cookieIndex = cookies.indexOf(cookieName+"=");
+				//如果在cookie文件中查找到cookie名，则进一步查找它的值
+				if (cookieIndex!=-1)
+				{
+					//cookie值的开始位置：cookie名的开始位置加上1（等于号占1位）
+					var cookieValueStart = cookieIndex + cookieName.length + 1;
+					//cookie值的结束位置：分号所在位置，从cookie值开始位置开始查找
+					var cookieValueEnd = cookies.indexOf(";",cookieValueStart);
+					//如果从cookie值开始位置到最后也没有查找到分号的位置，那该cookie值的结束位置是字符串的最后
+					if (cookieValueEnd == -1)
+					{
+						cookieValueEnd = cookies.length;
+					}
+					//获得cookie值
+					var cookieValue = cookies.substring(cookieValueStart,cookieValueEnd);
+					//返回cookie值
+					return cookieValue;
+				}
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			姓名：<input type="text" name="myName"><br>
+			密码：<input type="password" name="myPassword"><br>
+			<input type="button" value="确定" onclick="setCookie()">
+		</form>
+	</body>
+</html>

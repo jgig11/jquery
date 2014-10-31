@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>提交与重置事件</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function submitCheckForm()
+				{
+					if (myform.myName.value=="刘智勇")
+					{
+						alert("姓名没有修改，不能提交表单");
+						return false;
+					}
+				}
+				function resetCheckForm()
+				{
+					if (myform.myName.value!="刘智勇")
+					{
+						alert("姓名已经修改，不能重置表单");
+						return false;
+					}
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myform" onsubmit="return submitCheckForm()" onreset="return resetCheckForm()" action="submit.htm">
+			姓名：<input type="text" name="myName" value="刘智勇"><br>
+			性别：
+			<input type="radio" name="mySex" value="男">男
+			<input type="radio" name="mySex" value="女">女
+			<br>
+			城市：
+			<select name="city">
+			  <option value="北京">北京</option>
+			  <option value="上海">上海</option>
+			  <option value="广州">广州</option>
+			</select><br>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+	</body>
+</html>

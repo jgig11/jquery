@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>锚对象与链接对象的区别</title>
+	</head>
+	<body>
+		<a name="index">JavaScript课程介绍</a><br>
+		<a href="sample31_1.htm" name="mylink1">基础篇</a><br>
+		<a href="sample31_2.htm" name="mylink2">实用篇</a><br>
+		<a href="sample31_3.htm">Ajax篇</a><br><br>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//循环输出所有Link对象
+				var linkLenght = document.links.length;
+				document.write("本例中的超链接一共有",linkLenght,"个<br>这些超链接分别为：<br>");
+				for(var i=0;i<linkLenght;i++)
+				{
+					if (document.links[i].text!=undefined)
+					{
+						document.write(document.links[i].text,"：")
+					}
+					else if (document.links[i].innerText!=undefined)
+					{
+						document.write(document.links[i].innerText,"：")
+					}
+					document.write(document.links[i].href,"<br>");
+				}
+				//循环输出所有Anchor对象
+				var anchorsLenght = document.anchors.length;
+				document.write("<br>本例中的锚一共有",anchorsLenght,"个<br>这些超链接分别为：<br>");
+				for(var i=0;i<anchorsLenght;i++)
+				{
+					if (document.anchors[i].text!=undefined)
+					{
+						document.write(document.anchors[i].text,"：")
+					}
+					else if (document.anchors[i].innerText!=undefined)
+					{
+						document.write(document.anchors[i].innerText,"：")
+					}
+					document.write(document.anchors[i].name,"<br>");
+				}
+			-->
+		</script>
+	</body>
+</html>
+

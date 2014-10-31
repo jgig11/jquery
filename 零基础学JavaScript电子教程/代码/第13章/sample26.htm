@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>创建下拉列表框</title>
+	</head>
+	<body>
+		<form name="myForm">
+			您的爱好是什么？<br>
+			<select name="like">
+				<option>游泳</option>
+			</select>
+			<input type="reset" value="重置">
+		</form>
+		<script language="javascript" type="text/javascript">
+		<!--
+			//创建数组
+			var optionArr = new Array();
+			optionArr[0] = ["看书","看书"];
+			optionArr[1] = ["上网","上网"];
+			optionArr[2] = ["看电视","看电视"];
+			optionArr[3] = ["下棋","下棋"];
+			optionArr[4] = ["钓鱼","钓鱼"];
+			optionArr[5] = ["打牌","打牌"];
+			optionArr[6] = ["发呆","发呆"];
+			
+			//通过循环为下拉列表框创建选项
+			for (i=0;i<6;i++)
+			{
+				document.myForm.like.options[i] = new Option(optionArr[i][0],optionArr[i][1]);
+			}
+			//单独为下拉列表框创建选项
+			document.myForm.like.options[7] = new Option(optionArr[6][0],optionArr[6][1]);
+			//设置下拉列表框中的第2个选项为默认选项，重置表单时该选项会被选择
+			document.myForm.like.options[1].defaultSelected = true;
+			//设置下拉列表框中的第5个选项为当前选中的选项
+			document.myForm.like.options[4].selected = true;
+			
+		-->
+		</script>
+	</body>
+</html>
+

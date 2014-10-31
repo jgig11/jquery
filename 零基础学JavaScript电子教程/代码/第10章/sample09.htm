@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>MimeType对象与Plugin对象互查</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//判断是否支持Flash文件
+				if (navigator.mimeTypes["application/x-shockwave-flash"]!=null)
+				{
+					//navigator.mimeTypes属性是一个数组
+					//navigator.mimeTypes["application/x-shockwave-flash"]是数组中的一个元素，代表浏览器支持的MIME类型。本例中该MIME类型为：“application/x-shockwave-flash”
+					//navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin是对Plugin对象的引用，该Plugin对象可以支持MIME类型为“application/x-shockwave-flash”的文件。
+					document.write("支持Flash文件的插件为：" + navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin.name + "<br><br>");
+				}
+				else
+				{
+					document.write("该浏览器不支持Flash文件<br>");
+				}
+				
+				//判断是否安装Flash插件，navigator.plugins["Shockwave Flash"]代表的是一个名为“Shockwave Flash”的插件
+				if (navigator.plugins["Shockwave Flash"]!=null)
+				{
+					document.write("该浏览器安装了Flash插件，Flash插件可以打开以下扩展名的文件：<br>");
+					//navigator.plugins["Shockwave Flash"]元素返回的是一个数组，该数组是“Shockwave Flash”插件可以支持的所有MIME类型
+					for (i=0;i<navigator.plugins["Shockwave Flash"].length;i++)
+					{
+						document.write("." + navigator.plugins["Shockwave Flash"][i].suffixes + "&nbsp;&nbsp;");
+					}
+				}
+			-->
+		</script>
+	</head>
+	<body>	
+	</body>
+</html>

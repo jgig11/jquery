@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>延迟执行</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				var intervalid;
+				function showName()
+				{
+					intervalid = setTimeout("alert('您的姓名为：' + myForm.myName.value)",3000);
+				}
+				function showNameStop()
+				{
+					clearTimeout(intervalid);
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			姓名：<input type="text" name="myName" value="刘智勇">
+			<input type="button" value="确定" onclick="showName()">
+			<input type="button" value="取消弹出警告框" onclick="showNameStop()">
+		</form>
+	</body>
+</html>

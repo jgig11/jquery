@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>随机图片</title>
+	</head>
+	<body>
+		<img src="img/flower.jpg"><br>
+		图片：<input type="text" name="showImgCount" size="60">
+		<script language="javascript" type="text/javascript">
+			<!--
+				//设置计数器，查看是否所有的图片都已经加载完毕
+				var imgCount = 0;
+				//创建数组，将图片存在数组中
+				var arr = new Array();
+				
+				//通过循环，设置数组中的元素为一个图片对象，并设置图片的load事件
+				for (i=0;i<11;i++)
+				{
+					arr[i] = new Image();
+					//当一个图片加载完毕后检查是否所以图片都加载完毕，如果是的话，开始随机显示图片
+					arr[i].onload = imgOK;
+				}
+				//设置图片对象的src属性
+				arr[0].src = "img/img01.jpg";
+				arr[1].src = "img/img02.jpg";
+				arr[2].src = "img/img03.jpg";
+				arr[3].src = "img/img04.jpg";
+				arr[4].src = "img/img05.jpg";
+				arr[5].src = "img/img06.jpg";
+				arr[6].src = "img/img07.jpg";
+				arr[7].src = "img/img08.jpg";
+				arr[8].src = "img/img09.jpg";
+				arr[9].src = "img/img10.jpg";
+				arr[10].src = "img/img11.jpg";
+				
+				//用于判断图片是否缓存完毕的函数
+				function imgOK()
+				{
+					//计数器自加1
+					imgCount++;
+					showImgCount.value = "正在加载第 " + imgCount + " 张图片";
+					//如果已经缓存完毕的图片数等于数组元素个数，则开始随机显示图片
+					if (imgCount==arr.length)
+					{
+						setInterval("showImg()",1000);
+					}
+				}
+				
+				function showImg()
+				{
+					//设置随机数
+					var ran = Math.random();
+					ram = Math.round(ran*10);
+					//显示一个随机图片
+					document.images[0].src = arr[ram].src;
+					document.images[0].width = arr[ram].width * 0.15;
+					document.images[0].height = arr[ram].height * 0.15;
+					
+					showImgCount.value = arr[ram].src;
+				}
+			-->
+		</script>
+	</body>
+</html>

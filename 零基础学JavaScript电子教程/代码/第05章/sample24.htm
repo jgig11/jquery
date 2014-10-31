@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>eval函数</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				function pen(color,price)
+				{
+				  this.color = color;
+				  this.price = price;
+				}
+				
+				var pen1 = new pen("红色",10);
+				var pen2 = new pen("蓝色",20);
+				var pen3 = new pen("绿色",30);
+				
+				for (i=1;i<4;i++)
+				{
+					var penx = eval("pen"+i);
+					document.write("笔" + i +"的颜色为：" + penx.color +"，价格为：" + penx.price + "<br>");
+				}
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>表单验证</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+			function checkForm()
+			{
+				if (document.myForm.myName.value.length==0)
+				{
+					alert("请输入您的姓名");
+					return false;
+				}
+				if (document.myForm.mySex.value.length==0)
+				{
+					alert("请输入您的性别");
+					return false;
+				}
+				if (document.myForm.myYear.value.length==0 || document.myForm.myMonth.value.length==0 || document.myForm.myDay.value.length==0)
+				{
+					alert("您的出生年月日填写不完整");
+					return false;
+				}
+				if (document.myForm.myNational.value.length==0)
+				{
+					alert("请输入您的民族");
+					return false;
+				}
+				if (document.myForm.myBirthplace.value.length==0)
+				{
+					alert("请输入您的籍贯");
+					return false;
+				}
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm" onsubmit="return checkForm()" action="submit.htm">
+			姓名：<input type="text" name="myName"><br>
+			性别：<input type="text" name="mySex"><br>
+			出生年月日：<input type="text" name="myYear" size="4">-<input type="text" name="myMonth" size="2">-<input type="text" name="myDay" size="2"><br>
+			民族：<input type="text" name="myNational"><br>
+			籍贯：<input type="text" name="myBirthplace"><br>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+	</body>
+</html>

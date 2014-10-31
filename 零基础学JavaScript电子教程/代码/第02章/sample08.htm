@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>全局变量</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+					//定义全局变量x
+					var x = "这是一个全局变量";
+					//定义函数
+					function linkClick()
+					{
+						//在函数体里使用全局变量
+						alert(x);
+					}
+			-->
+		</script>
+	</head>
+	<body>
+		<!--单击超链接时调用函数-->
+		<a href="javascript:linkClick()">请点击</a>
+		<script language="javascript" type="text/javascript">
+			<!--
+			//输出全局变量
+			document.write(x);
+			-->
+		</script>
+	</body>
+</html>

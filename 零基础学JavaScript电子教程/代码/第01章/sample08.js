@@ -1,0 +1,1 @@
+document.write("本行文字是外部JavaScript文件输出的。")

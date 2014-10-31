@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>this运算符</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function outtext1(obj)
+				{
+					alert(obj.value);
+				}
+				function outtext2(str)
+				{
+					alert(str);
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			<input type="text" name="myText1" value="第一个文本框" onclick="outtext1(this)">
+			<input type="text" name="myText2" value="第二个文本框" onclick="outtext2(this.value)">
+			<input type="text" name="myText3" value="第三个文本框" onclick="outtext1(myForm.myText3)">
+			<input type="text" name="myText4" value="第四个文本框" onclick="outtext2(myForm.myText4.value)">
+		</form>
+	</body>
+</html>

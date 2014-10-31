@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>添加数组元素</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				//定义了一个空数组
+				var arr1 = new Array();
+				//该数组中的元素个数为0
+				document.write("数组1中元素的个数为：" + arr1.length + "<br>");
+				//为空数组添加三个元素
+				arr1[0] = "字符串";
+				arr1[1] = true;
+				arr1[2] = 13;
+				//添加三个元素后，数组中的元素个数为 3
+				document.write("添加元素后，数组1中元素的个数为：" + arr1.length + "<br><br>");
+				
+				//定义了一个元素个数为3的数组
+				var arr2 = new Array(3);
+				document.write("数组2中元素的个数为：" + arr2.length + "<br>");
+				arr2[3] = false;
+				//添加元素后，数组中的元素个数为 4
+				document.write("添加元素后，数组2中元素的个数为：" + arr2.length + "<br><br>");
+				
+				//定义了一个元素个数为3的数组
+				var arr3 = new Array("字符串",true,13);
+				document.write("数组3中元素的个数为：" + arr3.length + "<br>");
+				//没有为数组中的第4到10个属性赋值，而直接为数组中的第11个元素赋值
+				arr3[10] = false;
+				//此时，数组中的元素个数为 10
+				document.write("添加元素后，数组3中元素的个数为：" + arr3.length + "<br>");
+				//由于没有为数组中的第4到10个属性赋值，因此这些属性值都为undefined
+				document.write("数组3中的元素为：" + arr3);
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

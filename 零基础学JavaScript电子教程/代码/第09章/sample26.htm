@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>调试JavaScript代码</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function tryCode()
+				{
+					var myWin = window.open();
+					myWin.document.write("<script language=\"javascript\" type=\"text/javascript\">");
+					myWin.document.write(myForm.jsCode.value);
+					myWin.document.write("</script>");
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			<textarea name="jsCode" rows="10" cols="30">alert("测试")</textarea><br>
+			<input type="button" value="查看效果" onclick="tryCode()">
+		</form>
+	</body>
+</html>

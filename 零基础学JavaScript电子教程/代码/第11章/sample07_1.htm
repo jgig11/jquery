@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>刷新父窗口</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//显示当前时间，刷新窗口时可以看到时间的改变
+				var nowTime = new Date();
+				document.write(nowTime.toLocaleString() + "<br>");
+				//刷新父窗口
+				function reLoadWin()
+				{
+					//判断父窗口是否已经关闭
+					if (window.opener.closed)
+					{
+						alert("父窗口已经被关闭");
+					}
+					else
+					{
+						window.opener.location.reload();
+					}
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<a href="#" onclick="reLoadWin()">刷新父窗口</a><br>
+	</body>
+</html>

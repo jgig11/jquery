@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>输出HTML文件中的所有元素</title>
+	</head>
+	<body>
+		<font color='red'>请完成以下表单：</font>
+		<form name="myForm">
+			姓名：<input type="text" name="myName"><br>
+			性别：
+			<select name="mySex">
+				<option value="man">男</option>
+				<option value="woman">女</option>
+			</select><br>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+		<script language="javascript" type="text/javascript">
+			<!--
+				var elementLength = document.all.length;
+				for (i=0;i<elementLength;i++)
+				{
+					document.write(document.all[i].tagName,"<br>");
+				}
+			-->
+		</script>
+	</body>
+</html>

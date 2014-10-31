@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>重置表单的提示</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+			function ifReset()
+			{
+				if (window.confirm("真的要重置表单吗？"))
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm" onreset="return ifReset()">
+			姓名：<input type="text" name="myName"><br>
+			性别：<input type="text" name="mySex"><br>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+	</body>
+</html>

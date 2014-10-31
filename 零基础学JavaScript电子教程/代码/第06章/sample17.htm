@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>是否是对象的自有属性</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				var myObject = new Object();
+				myObject.name = "铅笔";
+
+				/*
+				返回true，因为:
+				name属性是myObject对象的属性
+				name属性不是继承过来的属性
+				name属性是可枚举的属性
+				*/
+				document.write(myObject.name + "：" + myObject.propertyIsEnumerable("name") + "<br>");
+				//返回false，因为myObject对象没有color属性
+				document.write(myObject.color + "：" + myObject.propertyIsEnumerable("color") + "<br>");
+				//返回false，因为constructor属性是从Object对象中继承过来的属性
+				document.write(myObject.constructor + "：" + myObject.propertyIsEnumerable("constructor") + "<br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

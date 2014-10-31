@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>移动窗口</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function GoTo()
+				{
+					window.moveTo(myForm.moveX.value,myForm.moveY.value);
+				}
+				function GoBy()
+				{
+					window.moveBy(myForm.moveX.value,myForm.moveY.value);
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			横坐标：<input type="text" name="moveX" value="10" size="5"><br>
+			纵坐标：<input type="text" name="moveY" value="10" size="5"><br>
+			<input type="button" value="移动到绝对位置" onclick="GoTo()">
+			<input type="button" value="移动到相对位置" onclick="GoBy()">
+		</form>
+	</body>
+</html>

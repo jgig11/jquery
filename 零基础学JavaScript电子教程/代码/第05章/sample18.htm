@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>caller属性</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				function myFun()
+				{
+					if (myFun.caller==null)
+					{
+						document.write("顶层调用<br>");
+					}
+					else
+					{
+						document.write("在函数中调用<br>");
+					}
+				}	
+				//在顶层代码中调用函数
+				myFun();
+				
+				function myFun1()
+				{
+					//在函数体中调用函数
+					myFun();
+				}
+				myFun1();
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

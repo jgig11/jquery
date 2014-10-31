@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>网站目录</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//打开网页，并查看该网页中的links[]
+				function openPage(pageURL)
+				{
+					//新开窗口打开网页
+					var indexWin = window.open(pageURL);
+					//查看新窗口中的超链接个数
+					var linkLength = indexWin.document.links.length;
+					//通过循环输出当前新开窗口中的所有超链接的URL
+					for (var i=0;i<linkLength;i++)
+					{	
+						document.write(indexWin.document.links[i].href,"<br>");
+						//递归调用
+						openPage(indexWin.document.links[i].href);
+					}
+					//关闭新开窗口
+					indexWin.close();
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<a href="#" onclick="openPage('sample31_index.htm')">网站首页</a>
+	</body>
+</html>
+

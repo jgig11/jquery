@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>网页调色板</title>
+		<script language="javascript" type="text/javascript">
+		<!--
+			function colorChange()
+			{
+				//设置文字颜色
+				document.fgColor = document.myForm.fgColors.value;
+				//设置背景颜色
+				document.bgColor = document.myForm.bgColors.value;
+			}
+		-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm" >
+			<h1 align="center">文档对象</h1>
+			&nbsp;&nbsp;&nbsp;&nbsp;Document对象是代表一个浏览器窗口或框架中的显示的HTML文件的对象。JavaScript会为每个HTML文档自动创建一个Document对象。通过Document对象可以操作HTML文档中的内容及其他对象。<br>
+			文字颜色：<input type="text" value="#fffff" name="fgColors"><br>
+			背景颜色：<input type="text" value="#000000" name="bgColors"><br>
+			<input type="button" value="调色" onclick="colorChange()">
+		</form>
+	</body>
+</html>

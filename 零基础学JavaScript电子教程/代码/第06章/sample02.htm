@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>使用自定义构造函数创建对象</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				//自定义构造函数
+				function pen(name,color,price)
+				{
+					//对象的name属性
+					this.name = name;
+				  //对象的color属性
+				  this.color = color;
+				  //对象的price属性
+				  this.price = price;
+				}
+
+				//定义一个对象
+				var pen1 = new pen("铅笔","红色",20);
+				document.write("笔1的名称为：" + pen1.name +"<br>");
+				document.write("笔1的颜色为：" + pen1.color +"<br>");
+				document.write("笔1的价格为：" + pen1.price +"<br><br>");
+				
+				//定义一个对象
+				var pen2 = new pen("钢笔","蓝色",30);
+				document.write("笔2的名称为：" + pen2.name +"<br>");
+				document.write("笔2的颜色为：" + pen2.color +"<br>");
+				document.write("笔2的价格为：" + pen2.price +"<br><br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

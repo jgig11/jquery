@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>函数的递归调用</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				function myFun(x)
+				{
+					if (x % 2 == 0)
+					{
+						document.write(x + "<br>");
+					}
+					if (x>1)
+					{
+						arguments.callee(x-1);
+					}
+				}
+				myFun(10);
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

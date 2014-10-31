@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>改变多行文本框大小</title>
+		<script language="javascript" type="text/javascript">
+		<!--
+			function resizeTextarea(resizeType)
+			{
+				if (resizeType=="big")
+				{
+					if (document.myForm.Context.rows<40)
+					{
+						document.myForm.Context.rows += 5;
+					}
+				}
+				else if (resizeType=="small")
+				{
+					if (document.myForm.Context.rows>5)
+					{
+						document.myForm.Context.rows -= 5;
+					}
+				}
+			}
+		-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			<input type="button" value="+" onclick="resizeTextarea('big')">
+			<input type="button" value="-" onclick="resizeTextarea('small')"><br>
+			<textarea rows="10" cols="60" name="Context"></textarea>
+		</form>
+	</body>
+</html>

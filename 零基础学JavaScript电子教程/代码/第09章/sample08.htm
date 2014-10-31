@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>错误处理</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				window.onerror = showErr;
+				function showErr(errMessage,errUrl,errLine) 
+				{ 
+					var str = "JavaScript程序出错：\n"
+					str += "错误信息：" + errMessage + "\n";
+					str += "产生错误的文件：" + errUrl + "\n";
+					str += "产生错误的行数：" + errLine + "\n";
+					alert(str);
+					return true;
+				}
+				//以下是一个错误语句，因为变量a和b都没有定义。
+				var err = a*b;
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

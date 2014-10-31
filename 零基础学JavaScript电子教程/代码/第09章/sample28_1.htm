@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>新开的窗口</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function inputText()
+				{
+					window.opener.myForm.myText.value = "子页面添加的文字";
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			<input type="button" value="在父级窗口的文本框里添加文字" onclick="inputText()">
+		</form>
+	</body>
+</html>

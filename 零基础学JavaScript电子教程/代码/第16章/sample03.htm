@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>二级联动菜单</title>
+		<script language="javascript" type="text/javascript">
+		<!--
+			function setSection(selectIndex)
+			{
+				window.frames[0].location.href = "sample03.asp?listName="+selectIndex;
+			}
+		-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			<select name="chapter" onchange="setSection(this.selectedIndex)">
+				<option>第1章  JavaScript基础</option>
+				<option>第2章  常量、变量与数据类型</option>
+				<option>第3章  表达式与运算符</option>
+			</select><br>
+			<iframe name="myFrame" src="sample03.asp?listName=0" scrolling="0" frameborder="0" height="25" width="220"></iframe>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>delete运算符</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//定义一个对象
+				myObject = new Object();
+				//设置对象的属性
+				myObject = {a:"myObject对象a属性的值" , b:"myObject对象b属性的值"};
+				//定义变量
+				var a = "使用var定义的变量";
+				b = "没有使用var定义的变量";
+				//定义一个数组
+				var arr = ["数组元素一","数组元素二"];
+				
+				//输出对象属性
+				document.write(myObject.a + "<br>");
+				document.write(myObject.b + "<br>");
+				//删除对象属性
+				delete myObject.b;
+				//输出删除过的对象属性，此时myObject.b属性不存在，输出undefined
+				document.write(myObject.b + "<br>");
+				//删除对象不存在的对象属性，也会返回true
+				document.write(delete myObject.c + "<br><br>");
+				
+				//删除对象
+				delete myObject;
+				//输出已删除的对象类型，此时myObject对象不存在，输出undefined
+				document.write(typeof(myObject) + "<br><br>");
+				
+				//输出变量a的值
+				document.write(a + "<br>");
+				//删除变量a，由于变量a是使用var定义的，所以不能删除，返回false
+				document.write(delete a + "<br><br>");
+				
+				//输出变量b的值
+				document.write(b + "<br>");
+				//删除变量b，由于变量b是没有使用var定义的，所以可以删除，返回true
+				document.write(delete b + "<br>");
+				//输出已删除的变量b的类型，此时变量b不存在，输出undefined
+				document.write(typeof(b) + "<br><br>");
+				
+				//输出数组元素的值
+				document.write(arr[0] + "<br>");
+				document.write(arr[1] + "<br>");
+				//删除数组元素
+				delete arr[0];
+				//输出数组元素的值，arr[0]被删除了，所以输出undefined
+				document.write(arr[0] + "<br>");
+				document.write(arr[1] + "<br><br>");
+				
+				//不能删除未定义的变量，因此返回false
+				document.write(delete d);
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

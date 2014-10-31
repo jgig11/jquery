@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>判断浏览器是否支持某种数据类型</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//判断是否支持QuickTime文件
+				if (navigator.mimeTypes["video/quicktime"]!=null)
+				{
+					document.write("该浏览器支持QuickTime类型的文件，可以在HTML直接使用embed元素插入QuickTime文件<br>");
+					document.write("QuickTime类型的文件的类型名称为：" + navigator.mimeTypes["video/quicktime"].type + "<br>");
+					document.write("QuickTime类型的文件的类型描述为：" + navigator.mimeTypes["video/quicktime"].description + "<br>");
+					document.write("QuickTime类型的文件类型的文件扩展名：" + navigator.mimeTypes["video/quicktime"].suffixes + "<br><br>");
+				}
+				//判断是否支持ASF文件
+				if (navigator.mimeTypes["video/x-ms-asf"]!=null)
+				{
+					document.write("该浏览器支持asf类型的文件");
+				}
+				else
+				{
+					document.write("该浏览器不支持asf类型的文件");
+				}
+			-->
+		</script>
+	</head>
+	<body>	
+	</body>
+</html>

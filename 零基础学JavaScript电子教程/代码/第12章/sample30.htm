@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>翻页</title>
+	</head>
+	<body>
+		<!--iframe用于网页链接-->
+		<iframe src="sample30_1.htm" width="400" height="300" name="sampleWin"></iframe><br>
+		<a href="#" onclick="return pageChange('up')" target="sampleWin">上一个范例</a>&nbsp;
+		<a href="#" target="sampleWin"></a>&nbsp;
+		<a href="#" onclick="return pageChange('down')" target="sampleWin">下一个范例</a>
+		<br>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//当前页计数（可翻页页数为1~9，所以当前页计数也为1~9）
+				var sample = 1;
+				//初始化信息
+				changeText(1);
+				//翻页控制
+				function pageChange(changeType)
+				{
+					//向下翻页
+					if (changeType=="down")
+					{
+						//当前页计数自加1
+						sample++;
+						//最大当前页不能大于9，如果大于9则重设为9.
+						if (sample==10)
+						{
+							sample = 9;
+							alert("已经是最后一页了");
+							return false;
+						}
+						else
+						{
+							//如果计数器还在1~9范围之内，则设置links属性。
+							changeText(sample);
+						}
+					}
+					else if (changeType=="up")		//向上翻页
+					{
+						//当前页计数自减1
+						sample--;
+						//最大当前页不能小于1，如果小于1则重设为1
+						if (sample==0)
+						{
+							sample = 1;
+							alert("已经是第一页了");
+							return false;
+						}
+						else
+						{
+							//如果计数器还在1~9范围之内，则设置links属性。
+							changeText(sample);
+						}
+					}
+				}
+				//设置links属性
+				function changeText(page)
+				{
+					//设置链接的URL
+					for (var i=0;i<document.links.length;i++)
+					{
+						document.links[i].href="sample30_" + page + ".htm";
+					}
+					//设置第2个链接的文本，以下设置在IE中有效
+					document.links[1].innerText = "当前网页为：sample30_" + page + ".htm";
+				}
+			-->
+		</script>
+	</body>
+</html>

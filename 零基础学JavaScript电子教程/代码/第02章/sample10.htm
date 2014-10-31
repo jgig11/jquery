@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>局部变量的优先级比同名的全局变量要高</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//定义全局变量
+				var x = "这是一个全局变量"
+				//定义函数
+				function writeText()
+				{
+					//定义了一个与全局变量同名的局部变量
+					var x = "这是一个局部变量";
+					//输出局部变量
+					document.write(x+"<br>");
+				}
+				//调用函数
+				writeText();
+				//输出全局变量
+				document.write(x+"<br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

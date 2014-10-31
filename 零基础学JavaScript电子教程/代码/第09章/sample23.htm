@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>关闭窗口</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//定义一个变量
+				var myWin;
+				//该函数的作用是使用window.open()方法打开一个窗口
+				//并将返回的Window对象赋值给myWin变量
+				function openWindow()
+				{
+					myWin = window.open("window_1.htm","myWindow","width=300,height=300");
+				}
+				//该函数的作用是关闭myWin对象所代表的浏览器窗口
+				function closeWindow()
+				{
+					myWin.close();
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<input type="button" value="打开窗口" onclick="openWindow()">
+		<input type="button" value="关闭窗口" onclick="closeWindow()">
+	</body>
+</html>

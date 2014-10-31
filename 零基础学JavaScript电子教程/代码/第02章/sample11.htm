@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>在函数体内定义全局变量</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//定义函数
+				function writeText()
+				{
+					//使用var关键字定义的变量为局部变量
+					var x = "这是一个局部变量";
+					//直接给没有定义的变量赋值，该变量即为全局变量
+					y = "这是一个全局变量";
+					//在函数体内可以输出局部变量
+					document.write(x+"<br>");
+					//在函数体内也可以输出全局变量
+					document.write(y+"<br>");
+				}
+				//调用函数
+				writeText();
+				//在函数体外可以输出全局变量，但不能输出函数体内的局部变量。
+				document.write(y+"<br>");
+				//如果有以下代码，将会出错
+				//document.write(x+"<br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

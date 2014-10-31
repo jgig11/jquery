@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>框架页</title>
+	</head>
+	<!--将浏览器窗口水平划分为两个部分-->
+	<frameset rows="20%,*">
+		<!--水平划分的第一个部分加载sample37_top.htm文件-->
+		<frame src="sample37_top.htm" name="top">
+		<!--水平划分的第二个部分并没有加载文件，是再垂直划分为两个部分-->
+		<frameset cols="30%,*">
+			<!--垂直划分的第一个部分加载sample37_left.htm文件-->
+			<frame src="sample37_left.htm" name="left">
+			<!--垂直划分的第二个部分加载sample37_right.htm文件-->
+			<frame src="sample37_right.htm" name="right">
+		</frameset>
+	</frameset>
+</html>

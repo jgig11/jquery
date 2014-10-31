@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>不使用提交按钮提交表单</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+			function submitForm()
+			{
+				//判断表单是否填写完整
+				for (i=0;i<2;i++)
+				{
+					if (document.myForm.elements[i].value.length==0)
+					{
+						alert("您的表单没有填写完整");
+						//将下拉列表框的默认选项设为第1项（即放在“请选择”选项上）
+						document.myForm.submitType.options[0].selected = true;
+						//使用return可以从函数中返回，即跳出该函数
+						return;
+					}
+				}
+				//判断下拉列表框的值
+				if (document.myForm.submitType.value=="selectType")
+				{
+					alert("请选择表单的提交方式");
+				}
+				else if (document.myForm.submitType.value=="Server")
+				{
+					//如果下拉列表框的值为Server，则将表单提交到网页上
+					document.myForm.action = "submit.htm";
+				}
+				else if (document.myForm.submitType.value=="Email")
+				{
+					//如果下拉列表框的值为Email，则将表单使用Email方式提交
+					document.encoding = "text/plain";
+					document.myForm.action = "mailto:admin@aspxfans.com";
+				}
+				//提交表单
+				document.myForm.submit();
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			姓名：<input type="text" name="myName"><br>
+			性别：<input type="text" name="mySex"><br>
+			表单提交方式：
+			<select name="submitType" onchange="submitForm()">
+			  <option value="selectType">请选择</option>
+			  <option value="Server">服务器方式</option>
+			  <option value="Email">EMAIL方式</option>
+			</select>
+		</form>
+	</body>
+</html>

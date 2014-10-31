@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>数组对象的splice()方法</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				var arr = [1,2,3,4,5,6,7,8,9];
+				document.write("原数组的元素为：" + arr.toString() + "<br><br>");
+				
+				//删除数组中的第5个元素，即从下标为5的元素开始，一共删除1个元素
+				var arr1 = arr.splice(5,1);
+				document.write("删除的元素为：" + arr1.toString() + "<br>");
+				document.write("原数组剩余元素为：" + arr.toString() + "<br><br>");
+				
+				//删除数组中的第2个到第4个元素，即从下标为1的元素开始，一共删除3个元素
+				var arr2 = arr.splice(1,3);
+				document.write("删除的元素为：" + arr2.toString() + "<br>");
+				document.write("原数组剩余元素为：" + arr.toString() + "<br><br>");
+				
+				//替换数组中第2个到第4个元素，即从下标为1的元素开始，一共删除3个元素，并插入新元素
+				var arr3 = arr.splice(1,3,"a","b","c","d","e");
+				document.write("删除的元素为：" + arr3.toString() + "<br>");
+				document.write("原数组剩余元素为：" + arr.toString() + "<br><br>");
+				
+				//直接从第2个元素处插入元素
+				var arr4 = arr.splice(1,0,true,false);
+				document.write("arr4为：" + arr4.toString() + "<br>");
+				document.write("原数组剩余元素为：" + arr.toString() + "<br><br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

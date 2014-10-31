@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>设置表单的提交方式</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+			function checkForm()
+			{
+				//判断表单是否填写完整
+				for (i=0;i<2;i++)
+				{
+					if (document.myForm.elements[i].value.length==0)
+					{
+						alert("您的表单没有填写完整");
+						return false;
+					}
+				}
+				//判断下拉列表框的值
+				if (document.myForm.submitType.value=="Server")
+				{
+					//如果下拉列表框的值为Server，则将表单提交到网页上
+					document.myForm.action = "submit.htm";
+				}
+				else
+				{
+					//如果下拉列表框的值为Email，则将表单使用Email方式提交
+					//设置提交表单的编码方法
+					document.encoding = "text/plain";
+					document.myForm.action = "mailto:admin@aspxfans.com";
+				}
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm" onsubmit="return checkForm()">
+			姓名：<input type="text" name="myName"><br>
+			性别：<input type="text" name="mySex"><br>
+			表单提交方式：
+			<select name="submitType">
+			  <option value="Server">服务器方式</option>
+			  <option value="Email">EMAIL方式</option>
+			</select>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+	</body>
+</html>

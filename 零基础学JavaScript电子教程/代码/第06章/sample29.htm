@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>与毫秒相关的方法</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//定义日期对象
+				var myDate = new Date();
+				//使用毫秒形式设置时间
+				myDate.setTime(1144343109500);
+				//返回 2006年4月7日 1:05:09
+				document.write(myDate.toLocaleString() + "<br>");
+				//将日期对象转换成毫秒数，返回 1144343109500
+				document.write(myDate.valueOf() + "<br>");
+				//将字符串中的日期转换成毫秒数，返回 1188550749000
+				document.write(Date.parse("august 31, 2007 16:59:09") + "<br>");
+				//将参数中的日期转换成毫秒数，返回 1187294026968
+				document.write(Date.UTC(2007,7,16,19,53,46,968) + "<br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

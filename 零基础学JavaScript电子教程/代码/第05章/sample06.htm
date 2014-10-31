@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>综合应用</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				//定义一个对象
+				var myObject = new Object();
+				//对象的属性a为一个函数，该函数的作用是返回一个数字的平方值
+				myObject.a = new Function("x","return x*x");
+				myObject.b = 10;
+				var x = myObject.a(myObject.b);
+				document.write("变量x的值为：" + x + "<br>");
+				
+				//定义一个数组
+				var arr = new Array();
+				//数组的第一个元素为一个函数，该函数的作用是返回一个数字的倍数
+				arr[0] = function(x) {return 2*x;};
+				arr[1] = 100;
+				arr[2] = arr[0](arr[1]);
+				document.write("arr[2]的值为：" + arr[2] + "<br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

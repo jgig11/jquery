@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>创建cookie</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+			function setCookie()
+			{
+				//设置第1个cookie，即名为cookieName的cookie
+				document.cookie = "cookieName = " + document.myForm.myName.value;
+				//设置第2个cookie，即名为cookiePassword的cookie
+				document.cookie = "cookiePassword = " + document.myForm.myPassword.value;
+				//读取cookie文件中的内容
+				alert("当前cookie中的内容为：\n" + document.cookie);
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			姓名：<input type="text" name="myName"><br>
+			密码：<input type="password" name="myPassword"><br>
+			<input type="button" value="确定" onclick="setCookie()">
+		</form>
+	</body>
+</html>

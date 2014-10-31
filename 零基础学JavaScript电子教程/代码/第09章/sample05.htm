@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>得到焦点与失去焦点</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//在网页中输出100行文字
+				for (var i=0;i<100;i++)
+				{
+					document.write("第" + (i+1) + "行<br>")
+				}
+				//以下代码用于滚动屏幕
+				var pos,timer; 
+				//初始化
+				function initialize() 
+				{ 
+					timer = setInterval("windowscroll()",50);
+				} 
+				//滚动屏幕
+				function windowscroll() 
+				{ 
+					pos = document.body.scrollTop; 
+					window.scroll(0,++pos); 
+					if (pos != document.body.scrollTop) 
+					{
+						myScroll();
+					}					
+				}
+				//停止滚动屏幕
+				function myScroll()
+				{
+					clearInterval(timer);	
+				}
+			-->
+		</script>
+	</head>
+	<body onfocus="initialize()" onblur="myScroll()">
+		
+	</body>
+</html>

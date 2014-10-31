@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>创建XMLHttpRequest对象</title>
+		<script language="javascript" type="text/javascript">
+		<!--
+			//定义一个变量，用于存放XMLHttpRequest对象
+			var xmlHttp;
+			//定义一个用于创建XMLHttpRequest对象的函数
+			function createXMLHttpRequest()
+			{
+				if (window.ActiveXObject)
+				{
+					xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+					document.write("在IE浏览器中创建XMLHttpRequest对象");
+				}
+				else if (window.XMLHttpRequest)
+				{
+					xmlHttp = new XMLHttpRequest();
+					document.write("在Netscape浏览器中创建XMLHttpRequest对象");
+				}
+			}
+			//创建XMLHttpRequest对象
+			createXMLHttpRequest();
+		-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

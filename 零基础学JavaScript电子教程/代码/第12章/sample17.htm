@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>输出HTML文件中的所有元素</title>
+	</head>
+	<body>
+		<font color='red'>请完成以下表单：</font>
+		<form name="myForm">
+			姓名：<input type="text" name="myName" value="刘智勇"><br>
+			性别：
+			<select name="mySex">
+				<option value="man">男</option>
+				<option value="woman">女</option>
+			</select><br>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+		<script language="javascript" type="text/javascript">
+			<!--
+				document.write("HTML文档中的第一个标签为：&lt;",document.all[0].tagName,"&gt;<br>");
+				document.write("文本框中的内容为：",document.all["myName"].value,"<br>");
+				var buttons = document.all.tags("input");
+				document.write("本例中input元素有",buttons.length,"个，其类型为别为：<br>");
+				for (i=0;i<buttons.length;i++)
+				{
+					document.write(buttons[i].type,"<br>");
+				}
+				
+			-->
+		</script>
+	</body>
+</html>

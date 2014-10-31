@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>操作新开窗口中的数据</title>
+	</head>
+	<body>
+		<form name="myForm">
+			<input type="text" name="myText1"><br>
+			<input type="text" name="myText2"><br>
+			<input type="button" value="查看效果" onclick="openWindow()">
+		</form>
+		<script language="javascript" type="text/javascript">
+			<!--
+				myForm.myText1.value = "第1个文本框";
+				myForm.myText2.value = "第2个文本框";
+				
+				function openWindow()
+				{
+					var myWin = window.open("sample27_1.htm","","width=300,height=300");
+					
+					myWin.myForm.myText1.value = "由父级窗口输入的文字：第1个文本框";
+					myWin.myForm.myText2.value = "由父级窗口输入的文字：第2个文本框";
+				}
+			-->
+		</script>
+	</body>
+</html>

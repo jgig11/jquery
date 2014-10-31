@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>apply()方法</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				//使用冒泡法排序
+				function myFun()
+				{
+					var arrLength = arguments.length;
+					for (i=0;i<arrLength;i++)
+					{
+						for (j=arrLength;j>i;j--)
+						{
+							if (arguments[j]<arguments[j-1])
+							{
+								temp = arguments[j];
+								arguments[j] = arguments[j-1]
+								arguments[j-1] = temp;
+							}
+						}
+					}
+					for (i=0;i<arrLength;i++)
+					{
+						document.write(arguments[i] + " ");
+					}
+				}
+				
+				//定义一个对象
+				var myObject = new Object();
+				//定义一个数组
+				var arr = [13,3,95];
+				//使用apply方法
+				myFun.apply(myObject,arr);
+				document.write("<br>");
+				
+				//直接将数组作为参数使用
+				myFun.apply(myObject,[6,9,2]);
+				document.write("<br>");
+				
+				//使用arguments对象传递参数
+				function myFun1()
+				{
+					myFun.apply(myObject,arguments);
+				}
+				myFun1(6,9,2,5);
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

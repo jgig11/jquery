@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>对象的引用方法</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function btClick1()
+				{
+					//获取第1个form对象的第1个元素的值
+					var Name = document.forms[0].elements[0].value;
+					//也可以使用以下方法
+					//var Name = document.myForm1.myName.value;
+					//var Name = document.forms[0].myName.value;
+					//var Name = document.myForm1.elements[0].value;
+					//var Name = document.forms["myForm1"].elements[0].value;
+					//var Name = document.forms["myForm1"].myName.value;
+					alert(Name);
+				}
+				function btClick2()
+				{
+					//获取名为myForm2的对象下的mySex的值
+					var sex = document.myForm2.mySex.value;
+					//也可以使用以下方法
+					//var sex = document.forms[1].elements[0].value;
+					//var sex = document.forms[1].mySex.value;
+					//var sex = document.myForm2.elements[0].value;
+					//var sex = document.forms["myForm2"].elements[0].value;
+					//var sex = document.forms["myForm2"].mySex.value;
+					alert(sex);
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm1">
+			请输入姓名：<input type="text" name="myName">
+			<input type="button" value="确定" onclick="btClick1()">
+		</form>
+		<form name="myForm2">
+			请输入性别：<input type="text" name="mySex">
+			<input type="button" value="确定" onclick="btClick2()">
+		</form>
+	</body>
+</html>

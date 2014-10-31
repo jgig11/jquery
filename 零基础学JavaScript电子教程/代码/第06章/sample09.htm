@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>修改对象原型</title>
+		<script language="javascript" type="text/javascript">
+			<!--				
+				function pen(color,price)
+				{
+				  this.color = color;
+				  this.price = price;
+				}
+				
+				pen.prototype.name = "钢笔";
+				
+				var myPen = new pen("蓝色",30);
+				document.write("笔的颜色为：" + myPen.color +"<br>");
+				document.write("笔的价格为：" + myPen.price +"<br>");
+				document.write("笔的名称为：" + myPen.name +"<br>");
+				document.write("笔的名称为：" + myPen.constructor.prototype.name +"<br><br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

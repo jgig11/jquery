@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>设置超链接属性</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function setDoc()
+				{
+					document.alinkColor = document.myForm.alink.value;
+					document.linkColor = document.myForm.mylink.value;
+					document.vlinkColor = document.myForm.vlink.value;
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			未访问过的超链接颜色：<input type="text" name="mylink" value="red"><br>
+			已访问过的超链接颜色：<input type="text" name="vlink" value="blue"><br>
+			激活的超链接颜色：<input type="text" name="alink" value="green"><br>
+			<input type="button" value="确定" onclick="setDoc()">
+		</form>
+		<a href="sample1.htm">未访问过的超链接</a>
+		<a href="sample01.htm">已访问过的超链接</a>
+		<a href="sample01.htm">激活的超链接</a>
+	</body>
+</html>

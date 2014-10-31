@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>鼠标移动事件</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function mousemove()
+				{
+					//在screenx文本框中显示鼠标的X轴坐标
+					document.myForm.screenx.value = event.screenX;
+					//在screeny文本框中显示鼠标的Y轴坐标
+					document.myForm.screeny.value = event.screenY;
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			<img src="img/flower.jpg" onmousemove="mousemove()"><br>
+			坐标：<input type="text" name="screenx" size="5"><input type="text" name="screeny" size="5"><br>
+			<input type="text" name="myText1" value="鼠标经过时产生事件" onmouseover="alert('鼠标经过')">
+			<input type="text" name="myText2" value="鼠标离开时产生事件" onmouseout="alert('鼠标离开')"><br>
+		</form>
+	</body>
+</html>

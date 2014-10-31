@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>框架页</title>
+	</head>
+	<body>
+		<iframe src="sample38.htm" width="400" height="250"></iframe><br>
+		<input type="button" value="更新内容按钮" onclick="upDate()">
+		<script language="javascript" type="text/javascript">
+			<!--
+			function upDate()
+			{
+				for (i=0;i<window.frames.length;i++)
+				{
+					for (j=0;j<window.frames[i].frames.length;j++)
+					{
+						//在子窗口文档中输入文字
+						window.frames[i].frames[j].document.write("这是第" + (j+1) + "个子窗口的内容");
+						//关闭子窗口文档的输出流
+						window.frames[i].frames[j].document.close();
+					}
+				}
+			}
+			-->
+		</script>
+	</body>
+</html>

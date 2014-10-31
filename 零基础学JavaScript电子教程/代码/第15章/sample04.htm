@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>局部更新</title>
+		<script language="javascript" type="text/javascript">
+		<!--
+			function changeData()
+			{
+				//查找标签（节点）
+				var node = document.getElementById("myDiv");
+				//在DOM中标签中的文字被认为是标签中的子节点
+				//节点的firstChild属性为该节点下的第1个子节点
+				//nodeValue属性为节点的值，也就是标签中的文本值
+				node.firstChild.nodeValue = "更新后的数据";
+			}
+		-->
+		</script>
+	</head>
+	<body>
+		<div id="myDiv">原数据</div>
+		<input type="button" value="更新数据" onclick="changeData()">
+	</body>
+</html>

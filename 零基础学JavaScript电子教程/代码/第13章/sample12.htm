@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>自动消除文本框中的文字</title>
+		<script language="javascript" type="text/javascript">
+		<!--
+			function clearText(textbox)
+			{
+				textbox.focus();
+				if (textbox.value == textbox.defaultValue)
+				{
+					textbox.value = "";
+				}
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm" action="submit.htm">
+			关键字：<input type="text" name="myText1" size="30" onmouseover="clearText(this)" value="请输入文字："><br>
+			<input type="submit" value="提交">
+		</form>
+	</body>
+</html>

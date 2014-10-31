@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>滚动文档</title>
+	</head>
+	<body>
+		<form name="myForm">
+			横坐标：<input type="text" name="scrollX" value="10" size="5"><br>
+			纵坐标：<input type="text" name="scrollY" value="10" size="5"><br>
+			<input type="button" value="滚动到绝对位置" onclick="GoTo()">
+			<input type="button" value="滚动到相对位置" onclick="GoBy()">
+		</form>
+		<pre>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//在网页中输出100行文字，用于产生竖向滚动条
+				for (var i=0;i<100;i++)
+				{
+					document.write("第" + (i+1) + "行：");
+					//输出空格，用于产生横向滚动条
+					for (var j=0;j<100;j++)
+					{
+						document.write("&nbsp;&nbsp;");
+					}
+					document.write("<br>");
+				}
+				function GoTo()
+				{
+					window.scrollTo(myForm.scrollX.value,myForm.scrollY.value);
+				}
+				function GoBy()
+				{
+					window.scrollBy(myForm.scrollX.value,myForm.scrollY.value);
+				}
+			-->
+		</script>
+		</pre>
+	</body>
+</html>

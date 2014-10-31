@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>设置日期</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//定义日期对象
+				var myDate = new Date(2007,7,16);
+				//日期对象中日期的初始时间，返回 2007年8月16日
+				document.write(myDate.toLocaleDateString() + "<br>");
+				//设置年份
+				myDate.setYear(1990);
+				//返回 1990年8月16日
+				document.write(myDate.toLocaleDateString() + "<br>");
+				//设置年份
+				myDate.setFullYear(1991);
+				//返回 1991年8月16日
+				document.write(myDate.toLocaleDateString() + "<br>");
+				//设置年份、月份
+				myDate.setFullYear(1992,10);
+				//返回 1992年11月16日
+				document.write(myDate.toLocaleDateString() + "<br>");
+				//设置年份、月份、日期
+				myDate.setFullYear(1993,11,23);
+				//返回 1993年12月23日
+				document.write(myDate.toLocaleDateString() + "<br>");
+				//设置月份
+				myDate.setMonth(2);
+				//返回 1993年3月23日
+				document.write(myDate.toLocaleDateString() + "<br>");
+				//设置月份、日期
+				myDate.setMonth(4,5);
+				//返回 1993年5月5日
+				document.write(myDate.toLocaleDateString() + "<br>");
+				//设置日期
+				myDate.setDate(1);
+				//返回 1993年5月1日
+				document.write(myDate.toLocaleDateString() + "<br>");
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

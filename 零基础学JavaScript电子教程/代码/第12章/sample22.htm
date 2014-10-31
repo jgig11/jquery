@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>置换图片</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function changeImg(imgName)
+				{
+					document.images[imgName].src="img/article2.gif";
+				}
+				function resetImg(imgName)
+				{
+					document.images[imgName].src="img/article1.gif";
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<img src="img/article1.gif" name="img1">
+		<a href="#" onmouseover="changeImg('img1')" onmouseout="resetImg('img1')">第1章 JavaScript基础</a><br>
+		<img src="img/article1.gif" name="img2">
+		<a href="#" onmouseover="changeImg('img2')" onmouseout="resetImg('img2')">第2章 常量、变量与数据类型</a><br>
+		<img src="img/article1.gif" name="img3">
+		<a href="#" onmouseover="changeImg('img3')" onmouseout="resetImg('img3')">第3章 表达式与运算符</a><br>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>局部变量在整个函数体内都有效</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function writeText()
+				{
+					//创建一个循环语句
+					for (var j=0;j<10;j++)
+					{
+						//在循环语句中定义一个变量k
+						//该变量不但在循环语句中起作用，还会在整个函数体中起作用
+						var k = 20;
+						document.write("j = "+j+"<br>");
+					}
+					//变量k可以在循环语句之外起作用
+					document.write("k = "+k+"<br>");
+					//变量j也同样可以在循环语句之外起作用
+					document.write("j = "+j+"<br>");
+				}
+				//调用函数
+				writeText();
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>with语句</title>
+	</head>
+	<body>
+		<form name="myForm">
+			<input type="text" name="myText1"><br>
+			<input type="text" name="myText2"><br>
+			<input type="text" name="myText3">
+		</form>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//没有使用with语句时的属性调用
+				document.forms[0].myText1.value = "第一个文本框";
+				//使用with语句时的属性调用
+				with(document.forms[0])
+				{
+					myText2.value = "第二个文本框";
+					myText3.value = "第三个文本框";
+				}
+			-->			
+		</script>
+	</body>
+</html>

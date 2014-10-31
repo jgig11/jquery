@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>事件处理程序的返回值</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function formSubmit()
+				{
+					//查看表单中的元素个数
+					var formLength = document.forms[0].elements.length;
+					//通过循环判断是否所有文本框中都输入了文字
+					//由于最后一个元素是按钮，所以变量i为小于formLength-1
+					for(var i=0;i<formLength-1;i++)
+					{
+						//如果有一个文本框中没有输入文字，就返回false
+						if (document.forms[0].elements[i].value.length==0)
+						{
+							alert("第" + (i+1) + "个文本框没有输入内容");
+							return false;
+						}
+					}
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm" action="submit.htm" onSubmit="return formSubmit()">
+			姓名：<input type="text" name="myName"><br>
+			密码：<input type="password" name="myPassword"><br>
+			<input type="submit">
+		</form>
+	</body>
+</html>

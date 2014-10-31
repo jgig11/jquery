@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>装载文档</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function myLoad()
+				{
+					myDiv.style.display="none";
+				}
+			-->
+		</script>
+	</head>
+	<body onload="myLoad()">
+		<!--在网页上显示一个图片-->
+		<img src="img/flower.jpg" name="myImg">
+		<!--设置一个层，该层盖在图片之上，当整个网页都加载完毕之后，再将该层隐去，显示出图片-->		
+		<div style="position:absolute;background-color:white;width:320px;height:220px;left:0px;top:0px" id="myDiv">
+			正在加载网页……
+		</div>
+		<script language="javascript" type="text/javascript">
+			<!--
+				/*
+				此处代码在正式文档中可以省略，在此处的作用是延迟显示效果。
+				只有在单击警告框中的“确定”按钮之后，整个网页才算完全加载完毕。
+				也只有在整个网页加载完毕之后，才会激发load事件。
+				*/
+				alert("网页加载完毕，显示图片");
+			-->
+		</script>
+	</body>
+</html>

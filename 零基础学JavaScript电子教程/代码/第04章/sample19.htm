@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>异常处理语句的综合应用</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function myFun(x,y)
+				{
+					var z;
+					try
+					{
+						if (y==0)
+						{
+							throw new Error("除数不能为0");
+						}
+						z = x/y;
+					}
+					catch(ex)
+					{
+						z = ex.message;
+					}
+					return z;
+				}
+				document.write(myFun(1,0));
+			-->			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

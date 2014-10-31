@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>停止周期执行代码</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//times变量用来设置计时
+				var times;
+				//intervalid变量用来返回setInterval()方法的值。根据该值可以停止周期执行代码
+				var intervalid;
+				
+				function showName()
+				{
+					//设置3秒后弹出警告框
+					times = 3;
+					//始初化倒计时文本框中的数字
+					myForm.showTime.value = times;
+					//每隔一秒执行一次setTime()函数，即让倒计时文本框中的数字倒计时
+					intervalid = setInterval("setTime()",1000);
+				}
+				
+				function setTime()
+				{
+					//时间计数减1
+					times--;
+					//在倒计时文本框中显示剩余时间
+					myForm.showTime.value = times;
+					//判断剩余时间是否为0
+					if (times==0)
+					{
+						//如果剩余时间为0，停止倒计时文本框中的计数
+						clearInterval(intervalid);
+						//弹出警告框
+						alert("您的姓名为：" + myForm.myName.value);
+					}
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			姓名：<input type="text" name="myName" value="刘智勇">
+			<input type="button" value="确定" onclick="showName()"><br>
+			<input type="text" name="showTime" size="1" value="3">秒后弹出警告框
+		</form>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>随机图片</title>		
+		<script language="javascript" type="text/javascript">
+			<!--
+				function changeImg()
+				{
+					//设置随机数
+					var ran = Math.random();
+					//由于random()方法产生的是0到1之间的随机数，所以将其乘以10，后再取整，就可以得到0到10之间的数
+					ram = Math.round(ran*10);
+					//将图片地址存在数组中
+					var arr = new Array();
+					arr[0] = "img/img01.jpg";
+					arr[1] = "img/img02.jpg";
+					arr[2] = "img/img03.jpg";
+					arr[3] = "img/img04.jpg";
+					arr[4] = "img/img05.jpg";
+					arr[5] = "img/img06.jpg";
+					arr[6] = "img/img07.jpg";
+					arr[7] = "img/img08.jpg";
+					arr[8] = "img/img09.jpg";
+					arr[9] = "img/img10.jpg";
+					arr[10] = "img/flower.jpg";
+					
+					document.images[0].src = arr[ram];
+				}
+				setInterval("changeImg()",1000);
+			-->
+		</script>
+	</head>
+	<body>
+		<img src="img/flower.jpg">		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>表单分组</title>
+	</head>
+	<body>
+		<form name="myform">
+			<p align="center">用户注册</p>
+			必填信息：<br>
+			<fieldset name="fieldset1">
+				用户名：<input type="text" name="username"><br>
+				密码：<input type="password" name="password"><br>
+			</fieldset><br>
+			详细信息：<br>
+			<fieldset name="fieldset2">
+				性别：
+				<input type="radio" name="sex" value="man">男 
+				<input type="radio" name="sex" value="woman">女<br>
+				QQ号码：<input type="text" name="qq"><br>
+			</fieldset><br>
+			基本设置：<br>
+			<fieldset name="fieldset3">
+				选择Cookies的保留时间：
+				<input type="radio" name="cookies" value="day">一天 
+				<input type="radio" name="cookies" value="month">一个月 
+				<input type="radio" name="cookies" value="year">一年 
+				<input type="radio" name="cookies" value="none">不保留 <br>
+			</fieldset>
+		</form>
+		<script language="javascript">
+			document.write("本例中的Form对象的elements元素共有：",myform.elements.length,"个<br>");
+			document.write("这些表单元素分别为：<br>");
+			for (i=0;i<myform.elements.length-1;i++)
+			{
+				document.write("名为：",myform.elements[i].name,"的",myform.elements[i].type,"元素<br>");
+			}
+		</script>
+	</body>
+</html>

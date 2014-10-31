@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>表单验证</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+			function checkForm()
+			{
+				for (i=0;i<document.myForm.elements.length;i++)
+				{
+					if (document.myForm.elements[i].value.length==0)
+					{
+						alert("您的表单没有填写完整");
+						return false;
+					}
+				}
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm" onsubmit="return checkForm()" action="submit.htm">
+			姓名：<input type="text" name="myName"><br>
+			性别：<input type="text" name="mySex"><br>
+			出生年月日：<input type="text" name="myYear" size="4">-<input type="text" name="myMonth" size="2">-<input type="text" name="myDay" size="2"><br>
+			民族：<input type="text" name="myNational"><br>
+			籍贯：<input type="text" name="myBirthplace"><br>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>窗口聚焦</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				function openWindow(sURL)
+				{
+					var myWindow = window.open(sURL,"myWin","width=200,height=100");
+					myWindow.focus();
+				}
+				function openBlurWindow(sURL)
+				{
+					var myWindow = window.open(sURL,"","width=200,height=100");
+					myWindow.blur();
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<a href="#" onclick="window.open('window_1.htm','myWin','width=200,height=100')">打开第1个网页</a><br>
+		<a href="#" onclick="window.open('window_2.htm','myWin','width=200,height=100')">打开第2个网页</a><br>
+		<a href="#" onclick="openWindow('window_3.htm')">打开第3个网页</a><br>
+		<a href="#" onclick="openBlurWindow('window_4.htm')">打开第4个网页</a><br>
+	</body>
+</html>

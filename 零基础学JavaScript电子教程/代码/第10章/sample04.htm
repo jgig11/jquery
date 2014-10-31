@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>综合应用</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				//获得屏幕的宽度
+				var ScreenWidths = screen.width;
+				//获得屏幕的有效高度
+				var ScreenAvailHeight = screen.availHeight;
+				//获得屏幕的有效高度
+				var ScreenAvailWidth = screen.availWidth;
+				
+				//根据不同的分辨率输出不同的内容。
+				if (ScreenWidths == 1024)
+				{
+					document.write("您正在使用的屏幕分辨为：1024*768" );
+				}
+				else if (ScreenWidths == 800)
+				{
+					document.write("您正在使用的屏幕分辨为：1024*768" );
+				}
+				else
+				{
+					document.write("您正在使用的屏幕分辨为：" + screen.width + "*" + screen.height);
+				}
+				//将窗口移动到屏幕的左上角
+				window.moveTo(0,0);
+				//根据显示器的有效宽度和高度自动调整浏览器窗口大小
+				window.resizeTo(ScreenAvailWidth,ScreenAvailHeight);
+			-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

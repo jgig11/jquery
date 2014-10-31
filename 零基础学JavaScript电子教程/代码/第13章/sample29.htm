@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>利用下拉列表框翻页</title>
+		<script language="javascript" type="text/javascript">
+		<!--
+			function goPage()
+			{
+				//获得下拉列表框的value属性值，即被选择的可选项的值
+				goUrl = document.myForm.goto.value;
+				if (goUrl!="")
+				{
+					//跳转页面
+					location.href=goUrl;
+				}
+			}
+		-->
+		</script>
+	</head>
+	<body>
+		<form name="myForm">
+			<select name="goto" onchange="goPage()">
+				<option value="">请选择您要跳转的网页</option>
+				<option value="sample01.htm">sample01.htm</option>
+				<option value="sample02.htm">sample02.htm</option>
+				<option value="sample03.htm">sample03.htm</option>
+				<option value="sample04.htm">sample04.htm</option>
+				<option value="sample05.htm">sample05.htm</option>
+				<option value="sample06.htm">sample06.htm</option>
+				<option value="sample07.htm">sample07.htm</option>
+			</select>
+		</form>
+	</body>
+</html>

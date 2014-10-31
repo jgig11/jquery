@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>关闭窗口</title>
+		<script language="javascript" type="text/javascript">
+			<!--
+				var myWin;
+				//打开窗口
+				function openWindow()
+				{
+					myWin = window.open("window_1.htm","myWindow","width=300,height=300");
+				}
+				//关闭窗口
+				function closeWindow()
+				{
+					//判断myWin变量是否已经赋值
+					if (myWin==undefined)
+					{
+						alert("没有打开新窗口，请先单击【打开窗口】按钮");
+					}
+					else if (myWin.closed)	//判断窗口是否已经关闭
+					{
+						alert("窗口已经关闭");
+					}
+					else
+					{
+						myWin.close();
+					}
+				}
+			-->
+		</script>
+	</head>
+	<body>
+		<input type="button" value="打开窗口" onclick="openWindow()">
+		<input type="button" value="关闭窗口" onclick="closeWindow()">
+	</body>
+</html>
