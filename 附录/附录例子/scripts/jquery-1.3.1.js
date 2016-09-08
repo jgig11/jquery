@@ -95,7 +95,7 @@ jQuery.fn = jQuery.prototype = {
 	selector: "",
 
 	// The current version of jQuery being used
-	jquery: "1.3.1",
+	jquery: "1.7.1",
 
 	// The number of elements contained in the matched element set
 	size: function() {
@@ -4210,7 +4210,7 @@ jQuery.each([ "Height", "Width" ], function(i, name){
 			(margin ?
 				num(this, "margin" + tl) + num(this, "margin" + br) : 0);
 	};
-	
+	//name lowerCase
 	var type = name.toLowerCase();
 
 	jQuery.fn[ type ] = function( size ) {
